@@ -1,0 +1,17 @@
+rules:
+  min_dimensions:
+    enabled: true
+    width: 800
+    height: 600
+  max_dimensions:
+    enabled: false
+    width: 10000
+    height: 10000
+  require_timestamp:
+    enabled: true
+  gps_allowed:
+    enabled: true
+    allowed: false  # GPS not allowed
+  require_orientation:
+    enabled: false
+

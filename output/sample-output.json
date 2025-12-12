@@ -1,0 +1,170 @@
+{
+  "processed": 5,
+  "passed": 3,
+  "failed": 2,
+  "images": [
+    {
+      "path": "photo1.jpg",
+      "hash": "abc123def4567890123456789012345678901234567890123456789012345678",
+      "exif": {
+        "maker": "Canon",
+        "timestamp": "2024-01-15T10:30:00Z",
+        "gps": {
+          "lat": 37.7749,
+          "lon": -122.4194
+        },
+        "orientation": 1
+      },
+      "image": {
+        "dimensions": {
+          "width": 1920,
+          "height": 1080
+        },
+        "color_model": "RGB",
+        "compression": "JPEG (Baseline DCT)"
+      },
+      "rules": [
+        {
+          "name": "min_dimensions",
+          "passed": true
+        },
+        {
+          "name": "require_timestamp",
+          "passed": true
+        },
+        {
+          "name": "gps_allowed",
+          "passed": false,
+          "message": "GPS not allowed but present"
+        }
+      ],
+      "status": "failed"
+    },
+    {
+      "path": "photo2.jpg",
+      "hash": "def456abc1237890123456789012345678901234567890123456789012345678",
+      "exif": {
+        "maker": "Nikon",
+        "timestamp": "2024-01-16T14:20:00Z",
+        "orientation": 1
+      },
+      "image": {
+        "dimensions": {
+          "width": 2560,
+          "height": 1440
+        },
+        "color_model": "RGB",
+        "compression": "JPEG (Progressive DCT)"
+      },
+      "rules": [
+        {
+          "name": "min_dimensions",
+          "passed": true
+        },
+        {
+          "name": "require_timestamp",
+          "passed": true
+        },
+        {
+          "name": "gps_allowed",
+          "passed": true
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "photo3.png",
+      "hash": "789012def456abc1234567890123456789012345678901234567890123456789",
+      "exif": null,
+      "image": {
+        "dimensions": {
+          "width": 800,
+          "height": 600
+        },
+        "color_model": "RGBA",
+        "compression": "PNG (Deflate)"
+      },
+      "rules": [
+        {
+          "name": "min_dimensions",
+          "passed": true
+        },
+        {
+          "name": "require_timestamp",
+          "passed": false,
+          "message": "timestamp missing from EXIF data"
+        },
+        {
+          "name": "gps_allowed",
+          "passed": true
+        }
+      ],
+      "status": "failed"
+    },
+    {
+      "path": "small_image.jpg",
+      "hash": "1234567890123456789012345678901234567890123456789012345678901234",
+      "exif": {
+        "maker": "Sony",
+        "timestamp": "2024-01-17T09:15:00Z"
+      },
+      "image": {
+        "dimensions": {
+          "width": 640,
+          "height": 480
+        },
+        "color_model": "RGB",
+        "compression": "JPEG (Baseline DCT)"
+      },
+      "rules": [
+        {
+          "name": "min_dimensions",
+          "passed": false,
+          "message": "image too small: 640x480 (minimum: 800x600)"
+        },
+        {
+          "name": "require_timestamp",
+          "passed": true
+        },
+        {
+          "name": "gps_allowed",
+          "passed": true
+        }
+      ],
+      "status": "failed"
+    },
+    {
+      "path": "grayscale.jpg",
+      "hash": "fedcba9876543210987654321098765432109876543210987654321098765432",
+      "exif": {
+        "maker": "Fujifilm",
+        "timestamp": "2024-01-18T16:45:00Z",
+        "orientation": 3
+      },
+      "image": {
+        "dimensions": {
+          "width": 1200,
+          "height": 800
+        },
+        "color_model": "Grayscale",
+        "compression": "JPEG (Extended Sequential DCT)"
+      },
+      "rules": [
+        {
+          "name": "min_dimensions",
+          "passed": true
+        },
+        {
+          "name": "require_timestamp",
+          "passed": true
+        },
+        {
+          "name": "gps_allowed",
+          "passed": true
+        }
+      ],
+      "status": "passed"
+    }
+  ]
+}
+
